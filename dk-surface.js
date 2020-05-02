@@ -1,5 +1,6 @@
 import { LitElement, html ,css} from 'lit-element';
-import {shadow} from '@dhruval/material-styles/shadow';
+import { shadow } from '@dhruval/material-styles/shadow';
+
 export class DkSurface extends LitElement {
 
   static get styles(){
@@ -10,9 +11,13 @@ export class DkSurface extends LitElement {
           display: block;
           position: relative;
           outline:none;
-          border-radius: 4px;
+          border-radius:var(--dk-surface-border-radius, 4px);
           background-color: var(--mdc-theme-surface, #fff);
           box-sizing: border-box;
+        }
+
+        :host([hidden]) { 
+          display: none; 
         }
 
         :host([color="primary"]){
@@ -75,6 +80,7 @@ export class DkSurface extends LitElement {
           left: 0;
           right: 0;
           bottom: 0;
+          border-radius:var(--dk-surface-border-radius);
         }
 
         :host([elevation="1"]) .overlay{
@@ -111,6 +117,10 @@ export class DkSurface extends LitElement {
 
         :host([elevation="24"]) .overlay{
           opacity:var(--dk-surface-overlay-opacitiy-elevation-24);
+        }
+        
+        ::slotted(*){
+          z-index:1;
         }
       `
     ];

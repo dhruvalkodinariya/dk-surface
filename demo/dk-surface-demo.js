@@ -1,7 +1,8 @@
 import { LitElement, html ,css} from 'lit-element';
 import '../dk-surface';
-import {Theme} from '../theme';
+import {Theme} from '@dhruval/material-styles/theme';
 import * as Typography from '@dhruval/material-styles/typography-literals';
+
 export class DkSurfaceDemo extends LitElement {
 
   static get styles(){
@@ -44,6 +45,7 @@ export class DkSurfaceDemo extends LitElement {
         justify-content:center;
         align-items:center;
         ${Typography.headline6};
+        --dk-surface-border-radius: 25px;
       }
 
       dk-surface[color='primary']{
@@ -56,6 +58,11 @@ export class DkSurfaceDemo extends LitElement {
 
       dk-surface[color='error']{
         color:var(--mdc-theme-on-error);
+      }
+      
+      .inputSurface{
+        width:400px;
+        height:400px;
       }
       `
     ];
@@ -113,6 +120,10 @@ export class DkSurfaceDemo extends LitElement {
         <dk-surface elevation=24 color="error">24dp</dk-surface>
       </div>
     </section>
+    <!-- <dk-surface elevation=2 class="inputSurface">
+      <input type="text" placeholder="name">
+      <button>Submit</button>
+    </dk-surface> -->
     `;
   }
 }
