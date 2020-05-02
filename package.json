@@ -1,0 +1,31 @@
+{
+  "name": "@dhruval/dk-surface",
+  "version": "1.0.0",
+  "description": "Material design surface",
+  "main": "dk-surface.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "material-design",
+    "surface"
+  ],
+  "author": "Dhruval Kodinariya",
+  "license": "ISC",
+  "dependencies": {
+    "@dhruval/material-styles": "^1.1.0",
+    "lit-element": "^2.3.1"
+  },
+  "devDependencies": {},
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhruvalkodinariya/dk-surface.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dhruvalkodinariya/dk-surface/issues"
+  },
+  "homepage": "https://github.com/dhruvalkodinariya/dk-surface#readme"
+}
